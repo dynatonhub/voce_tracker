@@ -1,0 +1,28 @@
+{
+    "name": "voce_tracker",
+    "version": "1.0.0",
+    "description": "Snowplow tracker to be installed on the 'voce' plataform projects for tracking events.",
+    "main": "dist/tracker.js",
+    "types": "dist/tracker.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "prepare": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dynatonhub/voce_tracker.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dynatonhub/voce_tracker/issues"
+    },
+    "homepage": "https://github.com/dynatonhub/voce_tracker#readme",
+    "dependencies": {
+        "@snowplow/browser-plugin-button-click-tracking": "^3.22.1",
+        "@snowplow/browser-plugin-link-click-tracking": "^3.22.1",
+        "@snowplow/browser-tracker": "^3.22.1",
+        "typescript": "^5.4.3"
+    }
+}
