@@ -15,17 +15,22 @@ import {
 } from "@snowplow/browser-plugin-link-click-tracking";
 
 export class SnowplowService {
-    tracker = newTracker("dynMainTracker", "https://neo.dynaton.com.br", {
-        appId: "voce-lojinha",
-        platform: "web",
-        cookieSameSite: "Lax",
-        contexts: {
-            webPage: true,
-        },
-        plugins: [ButtonClickTrackingPlugin(), LinkClickTrackingPlugin()],
-    });
+    public tracker: any;
 
-    constructor() {
+    constructor(appId?: string) {
+        const defaultAppId = "voce-lojinha";
+        const finalAppId = appId || defaultAppId;
+
+        this.tracker = newTracker("dynMainTracker", "https://neo.dynaton.com.br", {
+            appId: finalAppId,
+            platform: "web",
+            cookieSameSite: "Lax",
+            contexts: {
+                webPage: true,
+            },
+            plugins: [ButtonClickTrackingPlugin(), LinkClickTrackingPlugin()],
+        });
+
         enableActivityTracking({
             minimumVisitLength: 5,
             heartbeatDelay: 10,
