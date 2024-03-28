@@ -11,6 +11,9 @@ npm install https://github.com/dynatonhub/voce_tracker
 import { SnowplowService } from 'voce_tracker'
 
 new SnowplowService()
+
+// You can set a custom app_id in the initialization:
+new SnowplowService("custom-app-id")
 ```
 - It'll emit a page view event on instantiation.
 - It'll add listeners to links and buttons (covering both `<button>` and `<input type="button">`) to automatically track them and emit events when they're clicked.
