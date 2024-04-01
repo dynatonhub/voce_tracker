@@ -17,12 +17,9 @@ import {
 export class SnowplowService {
     public tracker: any;
 
-    constructor(appId?: string) {
-        const defaultAppId = "voce-lojinha";
-        const finalAppId = appId || defaultAppId;
-
+    constructor(appId: string) {
         this.tracker = newTracker("dynMainTracker", "https://neo.dynaton.com.br", {
-            appId: finalAppId,
+            appId: appId,
             platform: "web",
             cookieSameSite: "Lax",
             contexts: {
