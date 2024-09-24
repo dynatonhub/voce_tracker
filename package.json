@@ -1,6 +1,6 @@
 {
   "name": "voce_tracker",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Snowplow tracker to be installed on the 'voce' plataform projects for tracking events.",
   "main": "dist/tracker.js",
   "types": "dist/tracker.d.ts",
